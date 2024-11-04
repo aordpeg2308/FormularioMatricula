@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidad Privada</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="p-5">
+    <h1>Matriculación en Capipijo</h1>
+    
+    <div class="container form-container">
+        <h2 class="mb-4">Selección de Materias</h2>
+        <form id="matriculaForm">
+            <div class="form-group">
+                <label>Horas semanales:</label>
+                <input type="number" class="form-control" id="horas" min="1" placeholder="Introduce las horas semanales" required>
+            </div>
+
+            <div class="form-group">
+                <label>Materias:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="matematicasI">
+                    <label class="form-check-label" for="matematicasI">Matemáticas I</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="programacionBasica">
+                    <label class="form-check-label" for="programacionBasica">Programación Básica</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="matematicasII">
+                    <label class="form-check-label" for="matematicasII">Matemáticas II</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="programacionAvanzada">
+                    <label class="form-check-label" for="programacionAvanzada">Programación Avanzada</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Condiciones:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="antiguoAlumno">
+                    <label class="form-check-label" for="antiguoAlumno">Antiguo alumno</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="repetidor">
+                    <label class="form-check-label" for="repetidor">Repetidor de alguna materia</label>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-primary" onclick="calcularPrecio()">Calcular Precio</button>
+        </form>
+
+        <div id="resultado" class="mt-4 alert alert-info" style="display:none;"></div>
+    </div>
+
+    <script src="calculo.js"></script>
+</body>
+</html>
